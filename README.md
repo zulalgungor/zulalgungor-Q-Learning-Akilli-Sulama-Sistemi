@@ -211,15 +211,15 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 
 ### Akıllı sulama dashboard animasyonu
 
-‎Akıllı sulama sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif
+‎![Akıllı sulama sistemi animasyonu](./sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
 
 ### Q-Learning eğitim süreci
 
-Akıllı sulama sistemi/sonuclar/grafik_1_egitim_paneli.png
+![Akıllı sulama sistemi animasyonu](./sonuclar/grafik_1_egitim_paneli.png)
 
 ### 2025 günlük davranış
 
-Akıllı sulama sistemi/sonuclar/grafik_2_q_learning_gunluk_davranis.png
+[Akıllı sulama sistemi animasyonu](./sonuclar/grafik_2_q_learning_gunluk_davranis.pn)
 
 ### Sulama yöntemlerinin karşılaştırılması
 
