@@ -1,18 +1,35 @@
 # Q-Learning Tabanlı Akıllı Sulama Sistemi
 
-Bu proje, **Bursa ili için 2020–2025 dönemine ait gerçek çevresel verileri** kullanarak günlük sulama kararı üreten tabular **Q-Learning** tabanlı bir akıllı sulama sistemi geliştirmektedir.
+Bursa ili için 2020–2025 dönemine ait çevresel verileri kullanarak günlük sulama kararı üreten tabular **Q-Learning** tabanlı akıllı sulama sistemi.
 
-Model; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve mevsim bilgilerini değerlendirerek her gün uygulanacak sulama miktarını belirler. Amaç, toprak nemini uygun aralıkta tutarken gereksiz su kullanımını azaltmaktır.
+Model; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve mevsim bilgilerini değerlendirerek her gün uygulanacak sulama miktarını belirler. Temel amaç, toprağı uygun nem aralığında tutarken gereksiz su kullanımını ve su stresini azaltmaktır.
 
-> Bu çalışma bir yazılım ve simülasyon uygulamasıdır. Fiziksel sensör, tarla deneyi veya gerçek bir sulama kontrolörü içermemektedir. ERA5-Land toprak nemi verisi karşılaştırma amacıyla referans olarak kullanılmıştır.
+> **Not:** Bu çalışma bir yazılım ve simülasyon uygulamasıdır. Fiziksel sensör, tarla deneyi veya gerçek bir sulama kontrolörü içermez. ERA5-Land toprak nemi verisi karşılaştırma amacıyla referans olarak kullanılmıştır.
+
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif"
+       alt="Akıllı sulama sistemi dashboard animasyonu"
+       width="900">
+</p>
 
 ---
 
-### Akıllı sulama dashboard animasyonu
+## Öne Çıkan Sonuçlar
 
-![Akıllı sulama dashboard animasyonu](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
+| Ölçüt | Q-Learning sonucu |
+|---|---:|
+| 2025 toplam sulama | 843 mm |
+| İdeal nem oranı | %64.93 |
+| Kabul edilebilir nem oranı | %88.22 |
+| Su stresi görülen gün | 27 |
+| Toplam ödül | 5843.48 |
+| Başarı puanı | 97.849 |
+| Sulama yapılmayan gün | 220 / 365 |
+
+Q-Learning en az suyu kullanan yöntem değildir. Buna karşın toprağı hedef nem aralığında tutma, su stresini azaltma, toplam ödül ve birleşik başarı puanı bakımından karşılaştırılan yöntemler arasında en iyi sonucu vermiştir.
 
 ---
+
 ## Projenin Amacı
 
 - Günlük sulama kararlarını Q-Learning ile belirlemek
@@ -20,28 +37,28 @@ Model; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve m
 - Su stresi görülen gün sayısını azaltmak
 - Gereksiz ve aşırı sulamayı sınırlamak
 - Q-Learning yöntemini geleneksel sulama yöntemleriyle karşılaştırmak
-- Modeli görülmemiş bir yıl üzerinde bağımsız olarak test etmek
+- Modeli eğitimde kullanılmayan 2025 yılı üzerinde bağımsız olarak test etmek
 
 ---
 
 ## Kullanılan Veriler
 
-Veriler, **Open-Meteo Historical Weather API** üzerinden alınmıştır.
+Veriler **Open-Meteo Historical Weather API** üzerinden alınmıştır.
 
 ### Veri kaynakları
 
 - ERA5-Land
 - Open-Meteo Best Match
-- Referans evapotranspirasyon verisi
 - Günlük yağış verisi
+- Referans evapotranspirasyon verisi
 
 ### Kullanılan değişkenler
 
-- 2 metre sıcaklığı
+- Ortalama, minimum ve maksimum sıcaklık
 - Günlük yağış
 - Referans evapotranspirasyon (ET0)
-- 7–28 cm toprak nemi
 - 0–7 cm toprak nemi
+- 7–28 cm toprak nemi
 - Toprak sıcaklığı
 - Rüzgâr hızı
 - Yüzey basıncı
@@ -62,6 +79,8 @@ Veriler, **Open-Meteo Historical Weather API** üzerinden alınmıştır.
 
 ## ET0 Veri Kontrolü
 
+2020–2024 eğitim dönemine ait ET0 verisinin özeti:
+
 | Ölçüt | Değer |
 |---|---:|
 | Gün sayısı | 1827 |
@@ -78,7 +97,7 @@ Veriler, **Open-Meteo Historical Weather API** üzerinden alınmıştır.
 
 ### Durum uzayı
 
-Ajanın durumu aşağıdaki beş değişkenden oluşmaktadır:
+Ajanın durumu beş değişkenden oluşmaktadır:
 
 1. Toprak nemi
 2. Yağış durumu
@@ -86,7 +105,7 @@ Ajanın durumu aşağıdaki beş değişkenden oluşmaktadır:
 4. ET0 seviyesi
 5. Mevsim
 
-Toprak nemi beş sınıfa ayrılmıştır:
+Toprak nemi aşağıdaki sınıflara ayrılmıştır:
 
 - Çok kuru
 - Kuru
@@ -111,11 +130,11 @@ Toprak nemi beş sınıfa ayrılmıştır:
 5 × 3 × 3 × 3 × 4 × 4
 ```
 
-Bu boyut sırasıyla toprak nemi, yağış, sıcaklık, ET0, mevsim ve aksiyon sayılarını temsil etmektedir.
+Boyutlar sırasıyla toprak nemi, yağış, sıcaklık, ET0, mevsim ve aksiyon sayılarını temsil etmektedir.
 
 ---
 
-## Toprak Nemi Sınırları
+## Eğitim Verisinden Hesaplanan Sınırlar
 
 Bütün sınırlar yalnızca 2020–2024 eğitim verisinden hesaplanmıştır.
 
@@ -140,6 +159,7 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 
 | Parametre | Değer |
 |---|---:|
+| Seçilen deney | Deney 01 |
 | Öğrenme oranı, α | 0.10 |
 | İndirim faktörü, γ | 0.90 |
 | Epsilon azalması | 0.9975 |
@@ -148,7 +168,7 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 | Nihai eğitim episode sayısı | 4000 |
 | Seed | 42 |
 
-### Seçilen deneyin 2024 doğrulama sonucu
+### 2024 doğrulama sonucu
 
 | Ölçüt | Değer |
 |---|---:|
@@ -164,7 +184,7 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 
 ## Nihai Eğitim Sonucu
 
-Seçilen hiperparametrelerle model 2020–2024 verisinin tamamında 4000 episode boyunca yeniden eğitilmiştir.
+Seçilen hiperparametrelerle model, 2020–2024 verisinin tamamında 4000 episode boyunca yeniden eğitilmiştir.
 
 | Episode | Ortalama ödül | Ortalama su | Ortalama mutlak TD hatası | Epsilon |
 |---:|---:|---:|---:|---:|
@@ -187,14 +207,12 @@ Eğitim sürecinde ödül artmış, kullanılan su azalmış ve TD hatası daha 
 | Sabit zamanlı | 456 | 24.38 | 55.07 | 142 | 22 | -4255.09 | 44.989 |
 | Sulama yok | 0 | 31.51 | 43.29 | 195 | 12 | -5382.49 | 45.031 |
 
-Q-Learning en az suyu kullanan yöntem değildir. Buna karşın toprak nemini hedef aralıkta tutma, su stresini azaltma ve toplam ödül açısından en başarılı yöntemdir.
-
 Eşik tabanlı yönteme göre Q-Learning:
 
-- Kabul edilebilir nem oranını 27.95 yüzde puan artırmıştır.
-- İdeal nem oranını 23.83 yüzde puan artırmıştır.
-- Su stresi görülen gün sayısını 130'dan 27'ye düşürmüştür.
-- Su stresi günlerinde yaklaşık %79.2 azalma sağlamıştır.
+- Kabul edilebilir nem oranını **27.95 yüzde puan** artırmıştır.
+- İdeal nem oranını **23.83 yüzde puan** artırmıştır.
+- Su stresi görülen gün sayısını **130'dan 27'ye** düşürmüştür.
+- Su stresi günlerinde yaklaşık **%79.2 azalma** sağlamıştır.
 
 ---
 
@@ -212,7 +230,7 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 
 ---
 
-## Görseller
+## Grafikler
 
 ### Q-Learning eğitim süreci
 
@@ -232,7 +250,7 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 
 ### 2020–2025 çevresel veriler
 
-![2020-2025 çevresel veriler](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png)
+![2020–2025 çevresel veriler](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png)
 
 ### Yıllara göre nem başarısı
 
@@ -261,17 +279,27 @@ pip install numpy pandas matplotlib requests pillow
 
 ## Çalıştırma
 
-Ana Python dosyasını çalıştırın:
+README dosyası depo ana dizinindedir. Ana Python dosyası ise `Akıllı sulama sistemi` klasörü içinde bulunmaktadır.
+
+Öncelikle proje klasörüne girin:
+
+```bash
+cd "Akıllı sulama sistemi"
+```
+
+Ardından programı çalıştırın:
 
 ```bash
 python Akilli_Sulama_Sistemi.py
 ```
 
-İlk çalıştırmada çevresel veriler Open-Meteo API üzerinden indirilerek `veri/` klasörüne kaydedilir. Sonraki çalıştırmalarda doğrulanan yerel CSV dosyaları kullanılır.
+İlk çalıştırmada çevresel veriler Open-Meteo API üzerinden indirilerek `veri/` klasörüne kaydedilir. Sonraki çalıştırmalarda doğrulanan yerel CSV dosyaları yeniden kullanılır.
 
 ---
 
 ## Üretilen Dosyalar
+
+Programın ürettiği sonuçlar `Akıllı sulama sistemi/sonuclar/` klasörüne kaydedilir.
 
 ```text
 sonuclar/
@@ -318,9 +346,11 @@ zulalgungor-Q-Learning-Akilli-Sulama-Sistemi/
         ├── secilen_hiperparametreler.json
         ├── yillik_yontem_karsilastirmasi_2020_2025.csv
         └── yontem_karsilastirmasi_2025_test.csv
+```
+
 ---
 
-## Yöntemlerin Açıklaması
+## Karşılaştırılan Sulama Yöntemleri
 
 ### Q-Learning
 
@@ -360,7 +390,7 @@ Bu nedenle başarı puanı yalnızca su tüketimini değil, sulama kalitesini de
 ## Sınırlılıklar
 
 - Toprak nemi günlük su dengesi modeliyle simüle edilmiştir.
-- ERA5-Land verileri saha sensörü ölçümü değildir.
+- ERA5-Land verileri doğrudan saha sensörü ölçümü değildir.
 - Kök bölgesi derinliği ve sulama verimi sabit kabul edilmiştir.
 - Model yalnızca Bursa koordinatları ve kullanılan dönem için değerlendirilmiştir.
 - Çalışmada gerçek vana, pompa, sensör veya mikrodenetleyici kontrolü bulunmamaktadır.
@@ -378,7 +408,7 @@ Model en düşük su tüketimini sağlamamış olsa da:
 - su stresi günlerini önemli ölçüde azaltmış,
 - toplam ödül ve birleşik başarı puanında en iyi sonucu elde etmiştir.
 
-Sonuçlar, pekiştirmeli öğrenmenin günlük çevresel değişkenlere göre uyarlanabilir sulama kararları üretmek için kullanılabileceğini göstermektedir.
+Sonuçlar, pekiştirmeli öğrenmenin günlük çevresel koşullara göre uyarlanabilir sulama kararları üretmek için kullanılabileceğini göstermektedir.
 
 ---
 
