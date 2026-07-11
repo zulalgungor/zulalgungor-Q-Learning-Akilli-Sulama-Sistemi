@@ -8,6 +8,11 @@ Model; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve m
 
 ---
 
+### Akıllı sulama dashboard animasyonu
+
+![Akıllı sulama dashboard animasyonu](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
+
+---
 ## Projenin Amacı
 
 - Günlük sulama kararlarını Q-Learning ile belirlemek
@@ -208,10 +213,6 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 ---
 
 ## Görseller
-
-### Akıllı sulama dashboard animasyonu
-
-![Akıllı sulama dashboard animasyonu](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
 
 ### Q-Learning eğitim süreci
 
