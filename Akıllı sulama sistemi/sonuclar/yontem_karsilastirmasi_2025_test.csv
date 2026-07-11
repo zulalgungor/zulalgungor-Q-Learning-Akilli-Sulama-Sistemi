@@ -1,0 +1,5 @@
+﻿Yıl,Veri dönemi,Yöntem,Toplam sulama (mm = L/m²),Sulama yapılan gün,İdeal nem oranı (%),Kabul edilebilir nem oranı (%),Çok kuru gün,Kuru gün,İdeal nemli gün,Kabul edilebilir nemli gün,Nemli gün,Çok ıslak gün,Su stresi görülen gün,Aşırı sulama görülen gün,Ortalama toprak nemi (%),Toplam ödül,Normalize edilmiş su cezası,Stres cezası,Çok ıslak gün cezası,Aşırı sulama cezası,Başarı puanı
+2025,Test dönemi,Q-Learning,843.0,145,64.93,88.22,0,27,237,322,85,16,27,4,34.08,5843.48,20.0,1.849,0.877,0.11,97.849
+2025,Test dönemi,Eşik tabanlı,786.0,126,41.1,60.27,10,120,150,220,70,15,130,0,30.64,2242.01,18.648,8.904,0.822,0.0,52.446
+2025,Test dönemi,Sabit zamanlı,456.0,76,24.38,55.07,123,19,89,201,112,22,142,19,28.07,-4255.09,10.819,9.726,1.205,0.521,44.989
+2025,Test dönemi,Sulama yok,0.0,0,31.51,43.29,147,48,115,158,43,12,195,0,24.14,-5382.49,0.0,13.356,0.658,0.0,45.031

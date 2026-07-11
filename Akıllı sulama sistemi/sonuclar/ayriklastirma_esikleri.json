@@ -1,0 +1,14 @@
+{
+  "soil_very_dry": 0.17386666666666664,
+  "soil_dry": 0.2687583333333334,
+  "soil_target_high": 0.37965,
+  "soil_very_wet": 0.40855833333333325,
+  "soil_min": 0.11299999999999999,
+  "soil_max": 0.47033333333333327,
+  "temp_low": 11.904166666666669,
+  "temp_high": 20.74861111111111,
+  "et0_low": 1.77,
+  "et0_high": 3.9533333333333327,
+  "birim": "Toprak nemi m3/m3, sıcaklık °C, ET0 mm",
+  "not": "Bütün eşikler yalnızca 2020-2024 eğitim verisinden hesaplanmıştır."
+}

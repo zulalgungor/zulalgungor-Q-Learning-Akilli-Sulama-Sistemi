@@ -1,0 +1,38 @@
+{
+  "secim_yontemi": "2024 doğrulama yılında en yüksek birleşik başarı puanı",
+  "deney_tasarimi": "Dokuz kontrollü hiperparametre kombinasyonu",
+  "hiperparametre_egitim_yillari": [
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "dogrulama_yili": 2024,
+  "nihai_egitim_yillari": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "bagimsiz_test_yili": 2025,
+  "denenen_kombinasyon_sayisi": 9,
+  "her_deney_episode_sayisi": 1200,
+  "nihai_egitim_episode_sayisi": 4000,
+  "seed": 42,
+  "secilen_deney": "Deney 01",
+  "alpha": 0.1,
+  "gamma": 0.9,
+  "epsilon_decay": 0.9975,
+  "dogrulama_basarisi": {
+    "toplam_sulama_mm": 723.0,
+    "ideal_nem_orani_yuzde": 70.77,
+    "kabul_edilebilir_nem_orani_yuzde": 85.52,
+    "su_stresi_gun": 34,
+    "cok_islak_gun": 19,
+    "asiri_sulama_gun": 1,
+    "toplam_odul": 6153.92,
+    "birlesik_basari_puani": 104.595
+  },
+  "not": "2025 verisi hiperparametre seçimi sırasında kullanılmamıştır. Seçilen değerlerle model 2020-2024 verisinin tamamında yeniden eğitilir."
+}
