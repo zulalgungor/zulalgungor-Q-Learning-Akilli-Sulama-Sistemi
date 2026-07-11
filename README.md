@@ -295,20 +295,29 @@ sonuclar/
 ## Proje Klasör Yapısı
 
 ```text
-AkilliSulamaSistemi/
-├── Akilli_Sulama_Sistemi.py
+zulalgungor-Q-Learning-Akilli-Sulama-Sistemi/
 ├── README.md
-├── veri/
-│   ├── bursa_2020_2025_gunluk_gercek_veri.csv
-│   ├── bursa_2020_2024_egitim.csv
-│   └── bursa_2025_test.csv
-└── sonuclar/
-    ├── grafikler
-    ├── animasyon
-    ├── model dosyası
-    └── karşılaştırma tabloları
-```
-
+├── .gitignore
+└── Akıllı sulama sistemi/
+    ├── Akilli_Sulama_Sistemi.py
+    ├── veri/
+    │   ├── bursa_2020_2025_gunluk_gercek_veri.csv
+    │   ├── bursa_2020_2024_egitim.csv
+    │   └── bursa_2025_test.csv
+    └── sonuclar/
+        ├── animasyon_1_akilli_sulama_dashboard_2025.gif
+        ├── grafik_1_egitim_paneli.png
+        ├── grafik_2_q_learning_gunluk_davranis.png
+        ├── grafik_3_yontem_karsilastirmasi.png
+        ├── grafik_4_aksiyon_dagilimi.png
+        ├── grafik_5_tum_yillar_cevre_verileri.png
+        ├── grafik_6_yillara_gore_nem_basarisi.png
+        ├── ayriklastirma_esikleri.json
+        ├── hiperparametre_karsilastirmasi.csv
+        ├── q_table.npy
+        ├── secilen_hiperparametreler.json
+        ├── yillik_yontem_karsilastirmasi_2020_2025.csv
+        └── yontem_karsilastirmasi_2025_test.csv
 ---
 
 ## Yöntemlerin Açıklaması
