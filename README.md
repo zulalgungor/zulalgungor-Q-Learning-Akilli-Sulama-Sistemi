@@ -211,31 +211,31 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 
 ### Akıllı sulama dashboard animasyonu
 
-‎![Akıllı sulama sistemi animasyonu](./sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
+![Akıllı sulama dashboard animasyonu](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/animasyon_1_akilli_sulama_dashboard_2025.gif)
 
 ### Q-Learning eğitim süreci
 
-![Akıllı sulama sistemi animasyonu](./sonuclar/grafik_1_egitim_paneli.png)
+![Q-Learning eğitim süreci](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_1_egitim_paneli.png)
 
 ### 2025 günlük davranış
 
-[Akıllı sulama sistemi animasyonu](./sonuclar/grafik_2_q_learning_gunluk_davranis.pn)
+![2025 günlük davranış](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_2_q_learning_gunluk_davranis.png)
 
 ### Sulama yöntemlerinin karşılaştırılması
 
-Akıllı sulama sistemi/sonuclar/grafik_3_yontem_karsilastirmasi.png
+![Sulama yöntemlerinin karşılaştırılması](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_3_yontem_karsilastirmasi.png)
 
 ### Aksiyon dağılımı
 
-Akıllı sulama sistemi/sonuclar/grafik_4_aksiyon_dagilimi.png
+![Q-Learning aksiyon dağılımı](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_4_aksiyon_dagilimi.png)
 
 ### 2020–2025 çevresel veriler
 
-Akıllı sulama sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png
+![2020-2025 çevresel veriler](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png)
 
 ### Yıllara göre nem başarısı
 
-Akıllı sulama sistemi/sonuclar/grafik_6_yillara_gore_nem_basarisi.png
+![Yıllara göre nem başarısı](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_6_yillara_gore_nem_basarisi.png)
 
 ---
 
