@@ -387,17 +387,6 @@ Bu nedenle başarı puanı yalnızca su tüketimini değil, sulama kalitesini de
 
 ---
 
-## Sınırlılıklar
-
-- Toprak nemi günlük su dengesi modeliyle simüle edilmiştir.
-- ERA5-Land verileri doğrudan saha sensörü ölçümü değildir.
-- Kök bölgesi derinliği ve sulama verimi sabit kabul edilmiştir.
-- Model yalnızca Bursa koordinatları ve kullanılan dönem için değerlendirilmiştir.
-- Çalışmada gerçek vana, pompa, sensör veya mikrodenetleyici kontrolü bulunmamaktadır.
-- Elde edilen sonuçlar doğrudan tarımsal uygulama önerisi olarak kullanılmamalıdır.
-
----
-
 ## Sonuç
 
 Q-Learning tabanlı sistem, 2025 bağımsız test yılında karşılaştırılan yöntemlere göre toprak nemini daha başarılı şekilde yönetmiştir.
