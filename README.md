@@ -1,4 +1,4 @@
-# Q-Learning Tabanlı Akıllı Sulama Sistemi: Gerçek Verilerle Python Uygulaması
+# Q-Learning Tabanlı Akıllı Sulama Sistemi
 
 Bu proje, Bursa için Open-Meteo Historical Weather API üzerinden sağlanan ERA5-Land ve Best Match yeniden analiz verilerini kullanarak günlük sulama kararı üreten tabular Q-Learning modelini uygular.
 
