@@ -437,3 +437,10 @@ Sonuçlar, pekiştirmeli öğrenmenin günlük çevresel koşullara göre uyarla
 - ERA5-Land yeniden analiz verileri
 
 ---
+## Kaynaklar
+
+- Watkins, C. J. C. H., & Dayan, P. (1992). Q-Learning.
+- Sutton, R. S., & Barto, A. G. Reinforcement Learning: An Introduction.
+- Allen, R. G. et al. FAO-56 Crop Evapotranspiration.
+- Open-Meteo Historical Weather API.
+- ERA5-Land Reanalysis Dataset.
