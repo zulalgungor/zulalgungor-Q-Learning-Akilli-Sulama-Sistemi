@@ -202,7 +202,7 @@ Eğitim sürecinde ödül artmış, kullanılan su azalmış ve TD hatası daha 
 
 | Yöntem | Toplam su (mm) | İdeal nem (%) | Kabul edilebilir nem (%) | Su stresi görülen gün | Çok ıslak gün | Toplam ödül | Başarı puanı |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| **Q-Learning** | **843** | **64.93** | **88.22** | **27** | 16 | **5843.48** | **97.849** |
+| **Q-Learning** | **843** | **64.93** | **88.22** | **27** | **16** | **5843.48** | **97.849** |
 | Eşik tabanlı | 786 | 41.10 | 60.27 | 130 | 15 | 2242.01 | 52.446 |
 | Sabit zamanlı | 456 | 24.38 | 55.07 | 142 | 22 | -4255.09 | 44.989 |
 | Sulama yok | 0 | 31.51 | 43.29 | 195 | 12 | -5382.49 | 45.031 |
