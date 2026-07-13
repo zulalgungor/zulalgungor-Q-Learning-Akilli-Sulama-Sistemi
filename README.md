@@ -269,19 +269,6 @@ Aksiyon seçiminde epsilon-greedy yaklaşımı kullanılmıştır. Eğitim başl
 | 08 | 0.25 | 0.95 | 0.9975 | 765 | 68.58 | 84.97 | 34 | 6 | 5956.14 | 101.953 |
 | 09 | 0.25 | 0.99 | 0.9985 | 1119 | 36.34 | 63.66 | 77 | 60 | 216.02 | 51.871 |
 
-### Seçilen Hiperparametreler
-
-| Parametre | Değer |
-|---|---:|
-| Seçilen deney | Deney 01 |
-| α | 0.10 |
-| γ | 0.90 |
-| Epsilon azalması | 0.9975 |
-| Başlangıç epsilon | 1.00 |
-| Minimum epsilon | 0.05 |
-| Nihai eğitim | 4000 episode |
-| Seed | 42 |
-
 Deney 05 kabul edilebilir nem oranında daha yüksek bir sonuç vermiştir. Ancak Deney 01 daha az su kullanmış, yalnızca bir aşırı sulama günü oluşturmuş, en yüksek toplam ödülü ve en yüksek birleşik başarı puanını elde etmiştir. Bu nedenle Deney 01 seçilmiştir.
 
 ---
