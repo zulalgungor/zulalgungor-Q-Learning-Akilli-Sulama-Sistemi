@@ -371,19 +371,16 @@ Sonuçlar, Q-Learning yönteminin günlük çevresel koşullara uyum sağlayarak
 
 ## Kaynaklar
 
-1. R. S. Sutton and A. G. Barto, *Reinforcement Learning: An Introduction*, MIT Press, 2018.  
-   https://incompleteideas.net/book/the-book-2nd.html
-
-2. C. J. C. H. Watkins and P. Dayan, “Q-learning,” *Machine Learning*, 1992.  
+1. C. J. C. H. Watkins and P. Dayan, “Q-learning,” *Machine Learning*, 1992.  
    https://doi.org/10.1007/BF00992698
 
-3. R. G. Allen et al., *Crop Evapotranspiration—FAO Irrigation and Drainage Paper 56*, 1998.  
+2. R. G. Allen et al., *Crop Evapotranspiration—FAO Irrigation and Drainage Paper 56*, 1998.  
    https://www.fao.org/4/x0490e/x0490e00.htm
 
-4. J. Muñoz-Sabater et al., “ERA5-Land,” *Earth System Science Data*, 2021.  
+3. J. Muñoz-Sabater et al., “ERA5-Land,” *Earth System Science Data*, 2021.  
    https://doi.org/10.5194/essd-13-4349-2021
 
-5. Open-Meteo Historical Weather API.  
+4. Open-Meteo Historical Weather API.  
    https://open-meteo.com/en/docs/historical-weather-api
 ---
 
