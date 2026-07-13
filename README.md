@@ -157,7 +157,7 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 
 ### Seçilen hiperparametreler
 
-| Hiperparametre / Ölçüt | Deney 01 | Deney 02 | Deney 03 | Deney 04 | Deney 05 | Deney 06 | Deney 07 | Deney 08 | Deney 09 |
+| Hiperparametre / Ölçüt |  01 |  02 |  03 | 04 | 05 | 06 | 07 | 08 | 09 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Öğrenme oranı (α) | **0.10** | 0.10 | 0.10 | 0.15 | 0.15 | 0.15 | 0.25 | 0.25 | 0.25 |
 | İndirim faktörü (γ) | **0.90** | 0.95 | 0.99 | 0.90 | 0.95 | 0.99 | 0.90 | 0.95 | 0.99 |
@@ -165,8 +165,8 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 | Toplam sulama (mm) | **723** | 789 | 1071 | 816 | 843 | 1017 | 903 | 765 | 1119 |
 | İdeal nem oranı (%) | **70.77** | 63.39 | 55.46 | 60.66 | 64.48 | 54.10 | 49.73 | 68.58 | 36.34 |
 | Kabul edilebilir nem oranı (%) | **85.52** | 83.06 | 81.97 | 83.06 | 89.34 | 83.61 | 77.05 | 84.97 | 63.66 |
-| Su stresi görülen gün | **34** | 41 | 16 | 38 | 13 | 14 | 56 | 34 | 77 |
-| Aşırı sulama görülen gün | **1** | 9 | 47 | 11 | 19 | 48 | 27 | 6 | 60 |
+| Su stresi (gün) | **34** | 41 | 16 | 38 | 13 | 14 | 56 | 34 | 77 |
+| Aşırı sulama (gün) | **1** | 9 | 47 | 11 | 19 | 48 | 27 | 6 | 60 |
 | Toplam ödül | **6153.92** | 5358.06 | 3384.19 | 5092.81 | 5519.84 | 3474.78 | 3385.10 | 5956.14 | 216.02 |
 | Başarı puanı | **104.595** | 96.459 | 85.449 | 94.598 | 103.685 | 87.702 | 79.683 | 101.953 | 51.871 |
 
