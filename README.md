@@ -26,7 +26,7 @@ Sistem; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve 
 ---
 
 
-## Pekiştirmeli Öğrenme Probleminin Tanımı
+## Probleminin Tanımı
 
 Proje, sulama problemini bir **Markov Karar Süreci (MDP)** olarak ele almaktadır.
 
