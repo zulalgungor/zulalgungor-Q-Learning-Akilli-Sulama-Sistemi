@@ -385,10 +385,6 @@ Sonuçlar, Q-Learning yönteminin günlük çevresel koşullara uyum sağlayarak
 
 5. Open-Meteo Historical Weather API.  
    https://open-meteo.com/en/docs/historical-weather-api
-
-6. S. Kansal and B. Martin, “Reinforcement Q-Learning from Scratch in Python with OpenAI Gym.”  
-   https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
-
 ---
 
 ## Lisans
