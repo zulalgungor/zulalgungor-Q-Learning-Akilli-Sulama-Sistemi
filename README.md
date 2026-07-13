@@ -296,7 +296,7 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 ### Paketlerin kurulması
 
 ```bash
-pip install numpy pandas matplotlib requests pillow
+pip install -r requirements.txt
 ```
 
 ---
@@ -349,6 +349,7 @@ sonuclar/
 ```text
 zulalgungor-Q-Learning-Akilli-Sulama-Sistemi/
 ├── README.md
+├── requirements.txt
 ├── .gitignore
 └── Akıllı sulama sistemi/
     ├── Akilli_Sulama_Sistemi.py
