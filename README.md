@@ -17,7 +17,7 @@ Model; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve m
 ## Öne Çıkan Sonuçlar
 
 | Ölçüt | Q-Learning sonucu |
-|---|---:|
+|---|---|
 | 2025 toplam sulama | 843 mm |
 | İdeal nem oranı | %64.93 |
 | Kabul edilebilir nem oranı | %88.22 |
@@ -82,7 +82,7 @@ Veriler **Open-Meteo Historical Weather API** üzerinden alınmıştır.
 2020–2024 eğitim dönemine ait ET0 verisinin özeti:
 
 | Ölçüt | Değer |
-|---|---:|
+|---|---|
 | Gün sayısı | 1827 |
 | Minimum ET0 | 0.2600 mm |
 | Maksimum ET0 | 7.7600 mm |
@@ -116,7 +116,7 @@ Toprak nemi aşağıdaki sınıflara ayrılmıştır:
 ### Aksiyonlar
 
 | Aksiyon | Sulama miktarı |
-|---|---:|
+|---|---|
 | Sulama yok | 0 mm |
 | Düşük sulama | 3 mm |
 | Orta sulama | 6 mm |
@@ -139,7 +139,7 @@ Boyutlar sırasıyla toprak nemi, yağış, sıcaklık, ET0, mevsim ve aksiyon s
 Bütün sınırlar yalnızca 2020–2024 eğitim verisinden hesaplanmıştır.
 
 | Sınır | Değer |
-|---|---:|
+|---|---|
 | Çok kuru sınırı | 0.1739 m³/m³ |
 | İdeal nem alt sınırı | 0.2688 m³/m³ |
 | İdeal nem üst sınırı | 0.3796 m³/m³ |
@@ -153,20 +153,20 @@ Bütün sınırlar yalnızca 2020–2024 eğitim verisinden hesaplanmıştır.
 
 ## Hiperparametre Karşılaştırması
 
-Hiperparametre seçimi için öğrenme oranı, indirim faktörü ve epsilon azalma katsayısının farklı kombinasyonlarından oluşan dokuz deney gerçekleştirilmiştir. Her deney, 2020–2023 verileri üzerinde 1200 episode boyunca eğitilmiş ve 2024 verileri kullanılarak doğrulanmıştır.
+Hiperparametre seçimi için öğrenme oranı, indirim faktörü ve epsilon azalma katsayısının farklı kombinasyonlarından oluşan dengeli **L9 deney tasarımı** kullanılmıştır. Her deney, 2020–2023 verileri üzerinde 1200 episode boyunca eğitilmiş ve 2024 verileriyle doğrulanmıştır.
 
-| Hiperparametre / Ölçüt |  01 |  02 |  03 | 04 | 05 | 06 | 07 | 08 | 09 |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Öğrenme oranı (α) | **0.10** | 0.10 | 0.10 | 0.15 | 0.15 | 0.15 | 0.25 | 0.25 | 0.25 |
-| İndirim faktörü (γ) | **0.90** | 0.95 | 0.99 | 0.90 | 0.95 | 0.99 | 0.90 | 0.95 | 0.99 |
-| Epsilon azalması | **0.9975** | 0.9985 | 0.9995 | 0.9985 | 0.9995 | 0.9975 | 0.9995 | 0.9975 | 0.9985 |
-| Toplam sulama (mm) | **723** | 789 | 1071 | 816 | 843 | 1017 | 903 | 765 | 1119 |
-| İdeal nem oranı (%) | **70.77** | 63.39 | 55.46 | 60.66 | 64.48 | 54.10 | 49.73 | 68.58 | 36.34 |
-| Kabul edilebilir nem oranı (%) | **85.52** | 83.06 | 81.97 | 83.06 | 89.34 | 83.61 | 77.05 | 84.97 | 63.66 |
-| Su stresi (gün) | **34** | 41 | 16 | 38 | 13 | 14 | 56 | 34 | 77 |
-| Aşırı sulama (gün) | **1** | 9 | 47 | 11 | 19 | 48 | 27 | 6 | 60 |
-| Toplam ödül | **6153.92** | 5358.06 | 3384.19 | 5092.81 | 5519.84 | 3474.78 | 3385.10 | 5956.14 | 216.02 |
-| Başarı puanı | **104.595** | 96.459 | 85.449 | 94.598 | 103.685 | 87.702 | 79.683 | 101.953 | 51.871 |
+| Deney | Öğrenme oranı (α) | İndirim faktörü (γ) | Epsilon azalması | Toplam sulama (mm) | İdeal nem (%) | Kabul edilebilir nem (%) | Su stresi (gün) | Aşırı sulama (gün) | Toplam ödül | Başarı puanı |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Deney 01** | **0.10** | **0.90** | **0.9975** | **723** | **70.77** | **85.52** | **34** | **1** | **6153.92** | **104.595** |
+| Deney 02 | 0.10 | 0.95 | 0.9985 | 789 | 63.39 | 83.06 | 41 | 9 | 5358.06 | 96.459 |
+| Deney 03 | 0.10 | 0.99 | 0.9995 | 1071 | 55.46 | 81.97 | 16 | 47 | 3384.19 | 85.449 |
+| Deney 04 | 0.15 | 0.90 | 0.9985 | 816 | 60.66 | 83.06 | 38 | 11 | 5092.81 | 94.598 |
+| Deney 05 | 0.15 | 0.95 | 0.9995 | 843 | 64.48 | 89.34 | 13 | 19 | 5519.84 | 103.685 |
+| Deney 06 | 0.15 | 0.99 | 0.9975 | 1017 | 54.10 | 83.61 | 14 | 48 | 3474.78 | 87.702 |
+| Deney 07 | 0.25 | 0.90 | 0.9995 | 903 | 49.73 | 77.05 | 56 | 27 | 3385.10 | 79.683 |
+| Deney 08 | 0.25 | 0.95 | 0.9975 | 765 | 68.58 | 84.97 | 34 | 6 | 5956.14 | 101.953 |
+| Deney 09 | 0.25 | 0.99 | 0.9985 | 1119 | 36.34 | 63.66 | 77 | 60 | 216.02 | 51.871 |
+
 
 Doğrulama sonuçlarına göre en yüksek başarı puanını elde eden **Deney 01**, nihai modelin eğitimi için seçilmiştir.
 
@@ -203,8 +203,8 @@ Eğitim sürecinde ödül artmış, kullanılan su azalmış ve TD hatası daha 
 ## 2025 Bağımsız Test Sonuçları
 
 | Yöntem | Toplam su (mm) | İdeal nem (%) | Kabul edilebilir nem (%) | Su stresi görülen gün | Çok ıslak gün | Toplam ödül | Başarı puanı |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| **Q-Learning** | **843** | **64.93** | **88.22** | **27** | 16 | **5843.48** | **97.849** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Q-Learning** | **843** | **64.93** | **88.22** | **27** | **16** | **5843.48** | **97.849** |
 | Eşik tabanlı | 786 | 41.10 | 60.27 | 130 | 15 | 2242.01 | 52.446 |
 | Sabit zamanlı | 456 | 24.38 | 55.07 | 142 | 22 | -4255.09 | 44.989 |
 | Sulama yok | 0 | 31.51 | 43.29 | 195 | 12 | -5382.49 | 45.031 |
@@ -221,7 +221,7 @@ Eşik tabanlı yönteme göre Q-Learning:
 ## 2025 Aksiyon Dağılımı
 
 | Aksiyon | Gün sayısı | Toplam su katkısı |
-|---|---:|---:|
+|:---:|:---:|:---:|
 | Sulama yok | 220 | 0 mm |
 | Düşük sulama | 40 | 120 mm |
 | Orta sulama | 74 | 444 mm |
@@ -234,31 +234,53 @@ Ajan, yılın yaklaşık %60'ında sulama yapmamıştır.
 
 ## Grafikler
 
-### Q-Learning eğitim süreci
+### Q-Learning Eğitim Süreci
 
-![Q-Learning eğitim süreci](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_1_egitim_paneli.png)
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_1_egitim_paneli.png"
+       alt="Q-Learning eğitim süreci"
+       width="650">
+</p>
 
-### 2025 günlük davranış
+### 2025 Günlük Davranış
 
-![2025 günlük davranış](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_2_q_learning_gunluk_davranis.png)
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_2_q_learning_gunluk_davranis.png"
+       alt="2025 Q-Learning günlük davranışı"
+       width="650">
+</p>
 
-### Sulama yöntemlerinin karşılaştırılması
+### Sulama Yöntemlerinin Karşılaştırılması
 
-![Sulama yöntemlerinin karşılaştırılması](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_3_yontem_karsilastirmasi.png)
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_3_yontem_karsilastirmasi.png"
+       alt="Sulama yöntemlerinin karşılaştırılması"
+       width="650">
+</p>
 
-### Aksiyon dağılımı
+### Aksiyon Dağılımı
 
-![Q-Learning aksiyon dağılımı](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_4_aksiyon_dagilimi.png)
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_4_aksiyon_dagilimi.png"
+       alt="Q-Learning aksiyon dağılımı"
+       width="650">
+</p>
 
-### 2020–2025 çevresel veriler
+### 2020–2025 Çevresel Veriler
 
-![2020–2025 çevresel veriler](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png)
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_5_tum_yillar_cevre_verileri.png"
+       alt="2020–2025 çevresel veriler"
+       width="650">
+</p>
 
-### Yıllara göre nem başarısı
+### Yıllara Göre Nem Başarısı
 
-![Yıllara göre nem başarısı](Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_6_yillara_gore_nem_basarisi.png)
-
----
+<p align="center">
+  <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_6_yillara_gore_nem_basarisi.png"
+       alt="Yıllara göre nem başarısı"
+       width="650">
+</p>
 
 ## Kurulum
 
