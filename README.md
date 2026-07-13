@@ -388,7 +388,7 @@ Su cezası, aynı yıl içinde en fazla su kullanan yönteme göre normalize edi
 <p align="center">
   <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_1_egitim_paneli.png"
        alt="Q-Learning eğitim süreci"
-      v
+      width="750">
 </p>
 
 ### 2025 Günlük Davranış
@@ -396,7 +396,7 @@ Su cezası, aynı yıl içinde en fazla su kullanan yönteme göre normalize edi
 <p align="center">
   <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_2_q_learning_gunluk_davranis.png"
        alt="2025 Q-Learning günlük davranışı"
-       width="700">
+       width="750">
 </p>
 
 ### Sulama Yöntemlerinin Karşılaştırılması
@@ -404,7 +404,7 @@ Su cezası, aynı yıl içinde en fazla su kullanan yönteme göre normalize edi
 <p align="center">
   <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_3_yontem_karsilastirmasi.png"
        alt="Sulama yöntemlerinin karşılaştırılması"
-       width="700">
+       width="750">
 </p>
 
 ### Aksiyon Dağılımı
@@ -412,7 +412,7 @@ Su cezası, aynı yıl içinde en fazla su kullanan yönteme göre normalize edi
 <p align="center">
   <img src="Ak%C4%B1ll%C4%B1%20sulama%20sistemi/sonuclar/grafik_4_aksiyon_dagilimi.png"
        alt="Q-Learning aksiyon dağılımı"
-       width="700">
+       width="750">
 </p>
 
 ### 2020–2025 Çevresel Veriler
