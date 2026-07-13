@@ -155,7 +155,7 @@ Bütün sınırlar yalnızca 2020–2024 eğitim verisinden hesaplanmıştır.
 
 Hiperparametre seçimi için öğrenme oranı, indirim faktörü ve epsilon azalma katsayısının farklı kombinasyonlarından oluşan dengeli **L9 deney tasarımı** kullanılmıştır. Her deney, 2020–2023 verileri üzerinde 1200 episode boyunca eğitilmiş ve 2024 verileriyle doğrulanmıştır.
 
-| Deney | Öğrenme oranı (α) | İndirim faktörü (γ) | Epsilon azalması | Toplam sulama (mm) | İdeal nem (%) | Kabul edilebilir nem (%) | Su stresi (gün) | Aşırı sulama (gün) | Toplam ödül | Başarı puanı |
+| Deney | α | γ | Epsilon | Toplam sulama (mm) | İdeal nem (%) | Kabul edilebilir nem (%) | Su stresi (gün) | Aşırı sulama (gün) | Toplam ödül | Başarı puanı |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **01** | **0.10** | **0.90** | **0.9975** | **723** | **70.77** | **85.52** | **34** | **1** | **6153.92** | **104.595** |
 | 02 | 0.10 | 0.95 | 0.9985 | 789 | 63.39 | 83.06 | 41 | 9 | 5358.06 | 96.459 |
@@ -173,7 +173,7 @@ Doğrulama sonuçlarına göre en yüksek başarı puanını elde eden **Deney 0
 ### 2024 doğrulama sonucu
 
 | Ölçüt | Değer |
-|---|---:|
+|---|---|
 | Toplam sulama | 723 mm |
 | İdeal nem oranı | %70.77 |
 | Kabul edilebilir nem oranı | %85.52 |
@@ -189,7 +189,7 @@ Doğrulama sonuçlarına göre en yüksek başarı puanını elde eden **Deney 0
 Seçilen hiperparametrelerle model, 2020–2024 verisinin tamamında 4000 episode boyunca yeniden eğitilmiştir.
 
 | Episode | Ortalama ödül | Ortalama su | Ortalama mutlak TD hatası | Epsilon |
-|---:|---:|---:|---:|---:|
+|:---:|:---:|:---:|:---:|:---:|
 | 500 | 3186.08 | 937.56 mm | 23.34 | 0.286 |
 | 1000 | 5493.52 | 729.60 mm | 19.39 | 0.082 |
 | 2000 | 5988.71 | 681.48 mm | 18.69 | 0.050 |
