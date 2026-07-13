@@ -149,9 +149,8 @@ Bu boyutlar sırasıyla toprak nemi, yağış, sıcaklık, ET0, mevsim ve aksiyo
 Aksiyon uygulandıktan sonra bir sonraki günün toprak nemi basitleştirilmiş kök bölgesi su dengesiyle hesaplanmaktadır:
 
 ```text
-Yeni nem = Mevcut nem
-         + (Etkili yağış + Etkili sulama - ET0 kaybı) / Kök bölgesi derinliği
-         - Drenaj
+Yeni nem =
+Mevcut nem + (Etkili yağış + Etkili sulama - ET0 kaybı) / Kök bölgesi derinliği - Drenaj
 ```
 
 | Parametre | Değer |
@@ -195,7 +194,8 @@ Bu model fiziksel tarla sisteminin sadeleştirilmiş bir temsilidir.
 Toplam günlük ödül genel olarak şu yapıya sahiptir:
 
 ```text
-Toplam ödül = Nem durumu ödülü - Su maliyeti + Koşula bağlı ek ödül ve cezalar + Hedef neme ilerleme ödülü
+Toplam ödül =
+ Nem durumu ödülü - Su maliyeti + Koşula bağlı ek ödül ve cezalar + Hedefe ilerleme ödülü
 ```
 
 Bu yapı sayesinde ajan yalnızca daha fazla sulama yapmayı değil, doğru zamanda ve gerekli miktarda sulama yapmayı öğrenmektedir.
