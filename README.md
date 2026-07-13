@@ -151,11 +151,9 @@ Bütün sınırlar yalnızca 2020–2024 eğitim verisinden hesaplanmıştır.
 
 ---
 
-## Hiperparametre Araması
+## Hiperparametre Karşılaştırması
 
-Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney tasarımı** kullanılmıştır. Toplam dokuz kombinasyon denenmiş ve her kombinasyon 1200 episode boyunca eğitilmiştir.
-
-### Seçilen hiperparametreler
+Hiperparametre seçimi için öğrenme oranı, indirim faktörü ve epsilon azalma katsayısının farklı kombinasyonlarından oluşan dokuz deney gerçekleştirilmiştir. Her deney, 2020–2023 verileri üzerinde 1200 episode boyunca eğitilmiş ve 2024 verileri kullanılarak doğrulanmıştır.
 
 | Hiperparametre / Ölçüt |  01 |  02 |  03 | 04 | 05 | 06 | 07 | 08 | 09 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -169,6 +167,8 @@ Hiperparametre seçimi için üç faktörlü ve üç seviyeli dengeli **L9 deney
 | Aşırı sulama (gün) | **1** | 9 | 47 | 11 | 19 | 48 | 27 | 6 | 60 |
 | Toplam ödül | **6153.92** | 5358.06 | 3384.19 | 5092.81 | 5519.84 | 3474.78 | 3385.10 | 5956.14 | 216.02 |
 | Başarı puanı | **104.595** | 96.459 | 85.449 | 94.598 | 103.685 | 87.702 | 79.683 | 101.953 | 51.871 |
+
+Doğrulama sonuçlarına göre en yüksek başarı puanını elde eden **Deney 01**, nihai modelin eğitimi için seçilmiştir.
 
 ### 2024 doğrulama sonucu
 
