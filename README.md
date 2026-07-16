@@ -112,7 +112,6 @@ Model her gün mevcut çevresel koşulları değerlendirerek dört farklı sulam
 2. Yağış durumu
 3. Sıcaklık seviyesi
 4. ET0 seviyesi
-5. Mevsim
 
 Toprak nemi aşağıdaki sınıflara ayrılmıştır:
 
