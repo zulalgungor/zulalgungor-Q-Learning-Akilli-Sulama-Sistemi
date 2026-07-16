@@ -1,6 +1,6 @@
  Q-Learning Tabanlı Akıllı Sulama Sistemi
 
-Bu proje, Bursa ili için 2020–2025 dönemine ait gerçek çevresel verileri kullanarak günlük sulama kararı üreten tabular **Q-Learning** tabanlı bir akıllı sulama sistemi geliştirmeyi amaçlamaktadır.
+Bu proje, Bursa ili için 2020–2025 dönemine ait gerçek çevresel verileri kullanarak günlük sulama kararı üreten tablo **Q-Learning** tabanlı bir akıllı sulama sistemi geliştirmeyi amaçlamaktadır.
 
 Sistem; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve mevsim bilgilerini değerlendirerek her gün uygulanacak sulama miktarını belirler. Temel hedef, toprağı uygun nem aralığında tutarken gereksiz sulamayı ve su stresi oluşumunu azaltmaktır.
 
@@ -26,7 +26,7 @@ Sistem; toprak nemi, yağış, sıcaklık, referans evapotranspirasyon (ET0) ve 
 ---
 
 
-## Probleminin Tanımı
+## Problemin Tanımı
 
 Proje, sulama problemini bir **Markov Karar Süreci (MDP)** olarak ele almaktadır.
 
